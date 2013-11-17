@@ -12,7 +12,7 @@
 
 /**
  *	Enables Constraints to be created with chainable syntax
- *  Constraint can represent single NSLayoutConstraint (MASViewConstraint) 
+ *  Constraint can represent single NSLayoutConstraint (MASViewConstraint)
  *  or a group of NSLayoutConstraints (MASComposisteConstraint)
  */
 @protocol MASConstraint <NSObject>
@@ -24,7 +24,7 @@
 
 /**
  *	Modifies the NSLayoutConstraint constant,
- *  only affects MASConstraints in which the first item's NSLayoutAttribute is one of the following 
+ *  only affects MASConstraints in which the first item's NSLayoutAttribute is one of the following
  *  NSLayoutAttributeTop, NSLayoutAttributeLeft, NSLayoutAttributeBottom, NSLayoutAttributeRight
  */
 @property (nonatomic, copy, readonly) id<MASConstraint> (^insets)(MASEdgeInsets insets);
@@ -118,8 +118,10 @@
  */
 @property (nonatomic, assign) BOOL updateExisting;
 
+@property (nonatomic) BOOL hasBeenInstalled;
+
 /**
- *	Creates a NSLayoutConstraint. The constraint is installed to the first view or the or the closest common superview of the first and second view. 
+ *	Creates a NSLayoutConstraint. The constraint is installed to the first view or the or the closest common superview of the first and second view.
  */
 - (void)install;
 
@@ -133,7 +135,7 @@
 @protocol MASConstraintDelegate <NSObject>
 
 /**
- *	Notifies the delegate when the constraint needs to be replaced with another constraint. For example 
+ *	Notifies the delegate when the constraint needs to be replaced with another constraint. For example
  *  A MASViewConstraint may turn into a MASCompositeConstraint when an array is passed to one of the equality blocks
  */
 - (void)constraint:(id<MASConstraint>)constraint shouldBeReplacedWithConstraint:(id<MASConstraint>)replacementConstraint;

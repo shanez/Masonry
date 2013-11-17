@@ -17,12 +17,14 @@
 
 @implementation MASCompositeConstraint
 
+@synthesize hasBeenInstalled = _hasBeenInstalled;
 @synthesize delegate = _delegate;
 @synthesize updateExisting = _updateExisting;
 
 - (id)initWithChildren:(NSArray *)children {
     self = [super init];
     if (!self) return nil;
+    self.hasBeenInstalled = NO;
 
     _childConstraints = [children mutableCopy];
     for (id<MASConstraint> constraint in _childConstraints) {
@@ -78,7 +80,7 @@
     };
 }
 
-#pragma mark - NSLayoutConstraint multiplier proxies 
+#pragma mark - NSLayoutConstraint multiplier proxies
 
 - (id<MASConstraint> (^)(CGFloat))multipliedBy {
     return ^id(CGFloat multiplier) {
@@ -185,12 +187,14 @@
         constraint.updateExisting = self.updateExisting;
         [constraint install];
     }
+    self.hasBeenInstalled = YES;
 }
 
 - (void)uninstall {
     for (id<MASConstraint> constraint in self.childConstraints) {
         [constraint uninstall];
     }
+    self.hasBeenInstalled = NO;
 }
 
 @end
