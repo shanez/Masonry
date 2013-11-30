@@ -27,6 +27,7 @@
 
 @implementation MASViewConstraint
 
+@synthesize hasBeenInstalled = _hasBeenInstalled;
 @synthesize delegate = _delegate;
 @synthesize updateExisting = _updateExisting;
 
