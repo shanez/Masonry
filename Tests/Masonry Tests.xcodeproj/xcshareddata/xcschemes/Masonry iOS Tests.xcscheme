@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDA4D6EA17C0253B0076BD87"
-               BuildableName = "Masonry.framework"
-               BlueprintName = "Masonry Mac"
-               ReferencedContainer = "container:Masonry.xcodeproj">
+               BlueprintIdentifier = "DD7179FD18442A6400FAA7A8"
+               BuildableName = "MasonryTestsLoader.app"
+               BlueprintName = "MasonryTestsLoader"
+               ReferencedContainer = "container:Masonry Tests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,13 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDA4D70017C0253B0076BD87"
-               BuildableName = "Masonry Mac Tests.octest"
-               BlueprintName = "Masonry Mac Tests"
-               ReferencedContainer = "container:Masonry.xcodeproj">
+               BlueprintIdentifier = "DD717A3118442ADC00FAA7A8"
+               BuildableName = "Masonry iOS Tests.xctest"
+               BlueprintName = "Masonry iOS Tests"
+               ReferencedContainer = "container:Masonry Tests.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DD7179FD18442A6400FAA7A8"
+            BuildableName = "MasonryTestsLoader.app"
+            BlueprintName = "MasonryTestsLoader"
+            ReferencedContainer = "container:Masonry Tests.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -49,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DD7179FD18442A6400FAA7A8"
+            BuildableName = "MasonryTestsLoader.app"
+            BlueprintName = "MasonryTestsLoader"
+            ReferencedContainer = "container:Masonry Tests.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -58,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DD7179FD18442A6400FAA7A8"
+            BuildableName = "MasonryTestsLoader.app"
+            BlueprintName = "MasonryTestsLoader"
+            ReferencedContainer = "container:Masonry Tests.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
