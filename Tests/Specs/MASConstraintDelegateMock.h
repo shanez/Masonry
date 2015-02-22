@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 Jonas Budelmann. All rights reserved.
 //
 
-#import "MASConstraint.h"
+#import "MASConstraint+Private.h"
 
 @interface MASConstraintDelegateMock : NSObject <MASConstraintDelegate>
 
 @property (nonatomic, strong) NSMutableArray *constraints;
+@property (nonatomic, strong) NSMutableArray *chainedConstraints;
 
 @end

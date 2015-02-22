@@ -31,15 +31,16 @@
 
     self.buttonSize = CGSizeMake(100, 100);
 
-    // make sure updateConstraints gets called
-    [self setNeedsUpdateConstraints];
-
     return self;
+}
+
++ (BOOL)requiresConstraintBasedLayout
+{
+    return YES;
 }
 
 // this is Apple's recommended place for adding/updating constraints
 - (void)updateConstraints {
-    [super updateConstraints];
 
     [self.growingButton updateConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self);
@@ -48,6 +49,9 @@
         make.width.lessThanOrEqualTo(self);
         make.height.lessThanOrEqualTo(self);
     }];
+    
+    //according to apple super should be called at end of method
+    [super updateConstraints];
 }
 
 - (void)didTapGrowButton:(UIButton *)button {
